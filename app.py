@@ -64,8 +64,49 @@ libreoffice_lock = threading.Lock()
 conversion_cache = {}  # {file_hash: [list of base64 images]}
 
 # ============================================================
-# KONWERSJA DOCX → JPG (LibreOffice + PyMuPDF)
+# KONWERSJA DOCX → JPG (Unoserver + LibreOffice + PyMuPDF)
 # ============================================================
+
+def check_unoserver_running():
+    """Sprawdź czy unoserver działa"""
+    try:
+        result = subprocess.run(['pgrep', '-f', 'unoserver'], capture_output=True, text=True)
+        return result.returncode == 0
+    except:
+        return False
+
+
+def start_unoserver():
+    """Uruchom unoserver w daemon mode"""
+    if check_unoserver_running():
+        print("[UNOSERVER] ✓ Już działa")
+        return True
+
+    print("[UNOSERVER] Uruchamiam unoserver --daemon...")
+    try:
+        subprocess.Popen(
+            ['unoserver', '--daemon'],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            start_new_session=True
+        )
+
+        import time
+        time.sleep(2)
+
+        if check_unoserver_running():
+            print("[UNOSERVER] ✓ Uruchomiony pomyślnie")
+            return True
+        else:
+            print("[UNOSERVER] ❌ Nie udało się uruchomić")
+            return False
+    except FileNotFoundError:
+        print("[UNOSERVER] ❌ Nie znaleziono unoserver (pip install unoserver)")
+        return False
+    except Exception as e:
+        print(f"[UNOSERVER] ❌ Błąd: {e}")
+        return False
+
 
 def find_libreoffice():
     """Znajdź soffice w systemie"""
@@ -81,8 +122,34 @@ def find_libreoffice():
     return None
 
 
+def docx_to_pdf_unoconvert(docx_path, out_pdf_path):
+    """Konwertuj DOCX → PDF używając unoconvert (SUPER FAST!)"""
+    if not shutil.which('unoconvert'):
+        raise RuntimeError("unoconvert nie znalezione")
+
+    try:
+        cmd = [
+            'unoconvert',
+            '--convert-to', 'pdf',
+            docx_path,
+            out_pdf_path
+        ]
+
+        result = subprocess.run(cmd, capture_output=True, timeout=30)
+
+        if result.returncode != 0:
+            raise RuntimeError(f"unoconvert error: {result.stderr.decode()}")
+
+        if not os.path.exists(out_pdf_path) or os.path.getsize(out_pdf_path) == 0:
+            raise RuntimeError("unoconvert nie wygenerował PDF")
+
+        return True
+    except Exception as e:
+        raise RuntimeError(f"unoconvert failed: {e}")
+
+
 def docx_to_pdf_libreoffice(docx_path, out_pdf_path):
-    """Konwertuj DOCX → PDF używając LibreOffice"""
+    """Konwertuj DOCX → PDF używając LibreOffice (fallback)"""
     soffice = find_libreoffice()
     if not soffice:
         raise RuntimeError("LibreOffice nie znalezione! Zainstaluj: apt install libreoffice")
@@ -105,7 +172,11 @@ def docx_to_pdf_libreoffice(docx_path, out_pdf_path):
         result = subprocess.run(cmd, capture_output=True, timeout=60)
 
         if result.returncode != 0:
-            raise RuntimeError(f"LibreOffice error: {result.stderr.decode()}")
+            stderr = result.stderr.decode('utf-8', errors='ignore').strip()
+            if stderr:
+                raise RuntimeError(f"LibreOffice error: {stderr}")
+            else:
+                raise RuntimeError("LibreOffice failed (no error message)")
 
         # Znajdź wygenerowany PDF
         candidate = Path(outdir) / (Path(docx_path).stem + ".pdf")
@@ -169,7 +240,7 @@ def convert_docx_to_images(docx_path, use_cache=True, progress_callback=None):
     """
     Główna funkcja: DOCX → JPG
     1. Sprawdź cache
-    2. DOCX → PDF (LibreOffice)
+    2. DOCX → PDF (unoconvert SZYBKIE! lub LibreOffice fallback)
     3. PDF → JPG (PyMuPDF lub pdf2image)
     """
     # Cache
@@ -188,8 +259,22 @@ def convert_docx_to_images(docx_path, use_cache=True, progress_callback=None):
     with tempfile.TemporaryDirectory(dir=OUT_JPG_DIR) as tmpdir:
         pdf_path = os.path.join(tmpdir, 'out.pdf')
 
-        # DOCX → PDF
-        docx_to_pdf_libreoffice(docx_path, pdf_path)
+        # DOCX → PDF: Spróbuj unoconvert (SZYBKI!), fallback do LibreOffice
+        pdf_converted = False
+
+        # Strategia 1: unoconvert (jeśli unoserver działa)
+        if check_unoserver_running():
+            try:
+                print(f"[CONVERT] 🚀 Używam unoconvert (SUPER FAST)")
+                docx_to_pdf_unoconvert(docx_path, pdf_path)
+                pdf_converted = True
+            except Exception as e:
+                print(f"[CONVERT] ⚠️ unoconvert failed: {e}, fallback do LibreOffice...")
+
+        # Strategia 2: LibreOffice headless (fallback)
+        if not pdf_converted:
+            print(f"[CONVERT] Używam LibreOffice headless")
+            docx_to_pdf_libreoffice(docx_path, pdf_path)
 
         if progress_callback:
             progress_callback("Konwersja PDF → JPG...", 50)
@@ -515,6 +600,35 @@ def get_templates():
         return jsonify(json.load(f))
 
 
+@app.route('/api/template/<template_id>')
+def get_template_details(template_id):
+    """Szczegóły szablonu z wykrytymi placeholders"""
+    templates_path = os.path.join(TEMPLATES_DIR, 'templates.json')
+
+    with open(templates_path, 'r', encoding='utf-8') as f:
+        templates_data = json.load(f)
+
+    # Znajdź szablon
+    template = None
+    for t in templates_data['templates']:
+        if t['id'] == template_id:
+            template = t
+            break
+
+    if not template:
+        return jsonify({'error': 'Szablon nie znaleziony'}), 404
+
+    # Dla multi-file (WolfTax) - wczytaj z fields-description.json
+    if template['type'] == 'multi_file':
+        fields_desc_path = os.path.join(TEMPLATES_DIR, template['folder'], 'fields-description.json')
+        if os.path.exists(fields_desc_path):
+            with open(fields_desc_path, 'r', encoding='utf-8') as f:
+                fields_desc = json.load(f)
+                template['fields_description'] = fields_desc
+
+    return jsonify(template)
+
+
 @app.route('/api/products')
 def get_products():
     """Lista produktów"""
@@ -782,9 +896,14 @@ def handle_disconnect():
 print("\n" + "="*80)
 print("🚀 ZOPTYMALIZOWANY GENERATOR OFERT")
 print("="*80)
+print(f"Unoserver: {'✓ TAK' if check_unoserver_running() else '✗ NIE'}")
 print(f"LibreOffice: {find_libreoffice() or 'NIE ZNALEZIONO'}")
 print(f"PyMuPDF: {'✓ TAK' if HAS_PYMUPDF else '✗ NIE (używam pdf2image)'}")
 print("="*80)
+
+# Uruchom unoserver jeśli nie działa
+if not check_unoserver_running():
+    start_unoserver()
 
 # Uruchom pre-rendering w tle
 preload_async()
