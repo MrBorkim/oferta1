@@ -1,0 +1,35 @@
+{
+  "Dok1.docx": {
+    "placeholders": [],
+    "count": 0
+  },
+  "Doc2.docx": {
+    "placeholders": [
+      "NazwaFirmyKlienta",
+      "Sygnatura-sprawy",
+      "Temat",
+      "Termin",
+      "waznosc-oferty"
+    ],
+    "count": 5
+  },
+  "doc3.docx": {
+    "placeholders": [],
+    "count": 0
+  },
+  "doc4.docx": {
+    "placeholders": [
+      "Szacowanyczaspracy",
+      "Wynagrodzenie"
+    ],
+    "count": 2
+  },
+  "Dok5.docx": {
+    "placeholders": [],
+    "count": 0
+  },
+  "Dok6.docx": {
+    "placeholders": [],
+    "count": 0
+  }
+}
