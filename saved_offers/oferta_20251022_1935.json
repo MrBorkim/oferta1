@@ -1,0 +1,20 @@
+{
+  "formData": {
+    "KLIENT(NIP)": "9111000692",
+    "Oferta z dnia": "2025-10-25",
+    "RBG": "30",
+    "cena": "130000",
+    "firmaM": "MaxPro",
+    "kategoria": "Księgowość",
+    "opis": "OPIS zlecenia",
+    "temat": "Wykonanie kompleksowe",
+    "uzasadnienie": "Super cena nie ma co komentować ",
+    "waznado": "2025-10-31"
+  },
+  "selectedProducts": [
+    "1",
+    "2",
+    "3",
+    "7"
+  ]
+}

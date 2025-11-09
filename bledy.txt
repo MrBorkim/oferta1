@@ -1,0 +1,1123 @@
+
+           _ _
+ _ __ ___ (_) | ___ __ _   _ ___
+| '_ ` _ \| | |/ / '__| | | / __|
+| | | | | | |   <| |  | |_| \__ \  Serwery dla ludzi z pasją.
+|_| |_| |_|_|_|\_\_|   \__,_|___/
+
+
+Twoje porty TCP/UDP:
+ -  wojtek256.mikrus.xyz:20256 = 192.168.2.156:20256
+ -  wojtek256.mikrus.xyz:30256 = 192.168.2.156:30256
+
+Twoj adres IPv6: 2a01:4f9:2b:84e::256
+Użyteczne skrypty tworzone przez społeczność: /root/noobs/scripts/
+Dokumentacja: https://wiki.mikr.us/
+
+Twój VPS jest na serwerze: srv24.mikr.us
+
+--
+ - Stawianie serwerow głosowych (np. TeamSpeak i botów muzycznych) jest zabronione.
+ - Skanowanie sieci i uzywanie Torrenta jest zabronione (blokada VPS-a)
+ - Atakowanie kogokolwiek i zabawy w 'hacking' kończa sie natychmiastową utratą VPSa
+--
+Szybka konfiguracja serwera? wpisz: start
+--
+
+Last login: Sat Nov  8 18:32:43 2025 from 185.108.71.7
+root@w256:~# mc
+
+root@w256:~# cd /cytrus
+root@w256:/cytrus# ls
+aaa  AIDROPS  app4.py  box-api  dji-wody  Gastro-zamowienia  lody-magazyn  ML-app  monitor-cen  oferta
+root@w256:/cytrus# cd oferta
+root@w256:/cytrus/oferta# ls
+app.py  CACHE_SYSTEM.md  docx_to_html.py  generated_offers  index.html  oferta1.docx  produkty  __pycache__  README.md  requirements.txt  saved_offers  static  templates
+root@w256:/cytrus/oferta# python app.py
+================================================================================
+[STARTUP] 🚀 Inicjalizacja systemu...
+================================================================================
+[UNOSERVER] Uruchamiam unoserver --daemon...
+[UNOSERVER] ✓ Unoserver uruchomiony pomyślnie
+[STARTUP] Uruchamiam pre-loading w tle...
+[STARTUP] Pre-generowanie produktów...
+[STARTUP] Znaleziono 8 produktów do pre-generowania
+[STARTUP] Pre-generuję 1/8: 2.docx
+================================================================================
+[STARTUP] ✅ System gotowy do pracy!
+================================================================================
+ * Restarting with watchdog (inotify)
+[STARTUP] 💡 INTELIGENTNY SYSTEM CACHE
+================================================================================
+[STARTUP] ℹ️  Szablony będą renderowane ON-DEMAND (szybsze!)
+[STARTUP] ℹ️  Produkty są pre-renderowane (gotowe do użycia)
+================================================================================
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/produkty/2.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: 2.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/produkty/2.docx
+================================================================================
+[STARTUP] 🚀 Inicjalizacja systemu...
+================================================================================
+[UNOSERVER] ✓ Unoserver już działa
+[STARTUP] Uruchamiam pre-loading w tle...
+[STARTUP] Pre-generowanie produktów...
+[STARTUP] Znaleziono 8 produktów do pre-generowania
+[STARTUP] Pre-generuję 1/8: 2.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/produkty/2.docx
+================================================================================
+[STARTUP] ✅ System gotowy do pracy!
+================================================================================
+ * Debugger is active!
+ * Debugger PIN: 186-183-960
+[STARTUP] 💡 INTELIGENTNY SYSTEM CACHE
+================================================================================
+[STARTUP] ℹ️  Szablony będą renderowane ON-DEMAND (szybsze!)
+[STARTUP] ℹ️  Produkty są pre-renderowane (gotowe do użycia)
+================================================================================
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: 2.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/produkty/2.docx
+(1315454) wsgi starting up on http://0.0.0.0:40207
+(1315454) accepted ('104.28.129.37', 18901)
+(1315454) accepted ('104.28.129.37', 18748)
+104.28.129.37 - - [09/Nov/2025 12:52:11] code 400, message Bad request version ('\\x00*ÊÊ\\x13\\x01\\x13\\x02\\x13\\x03À,À+Ì©À0À/Ì¨À')
+104.28.129.37 - - [09/Nov/2025 12:52:11] "\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03´ïí6\x10PØQ\x8e~p|\x16\x1d\x0b®b®\x02ÛØº\x924¨ñ\x92\x8f¼}û\x91 Ë­£ª6ò$E\x1f^¹Ì\x8c\x98ÂXÙ\x9e\x8d¼+\x96þ\x143~â"\x84úö \x00*ÊÊ\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À" 400 -
+(1315454) accepted ('104.28.129.37', 18445)
+104.28.129.37 - - [09/Nov/2025 12:52:11] code 400, message Bad request version ('L\\x9dÅt\\x87\\x06ý_\\x0eGåªv©\\x9cR\\x00.Ä\\x89\\x00*\\x1a\\x1a\\x13\\x01\\x13\\x02\\x13\\x03À,À+Ì©À0À/Ì¨À')
+104.28.129.37 - - [09/Nov/2025 12:52:11] "\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03à¶ß¢å¦|¨±\x98üzÄÄ{À´0+ä\x01áä\x1a/¯\x92M\x10O\x0bè qc×;ðý}PÅ\x02* L\x9dÅt\x87\x06ý_\x0eGåªv©\x9cR\x00.Ä\x89\x00*\x1a\x1a\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À" 400 -
+(1315454) accepted ('104.28.129.37', 18768)
+104.28.129.37 - - [09/Nov/2025 12:52:11] code 400, message Bad request version ('ø\\x0fVcØUF¢+\\x11£SðNÞM*Ð\\x17Õ¨\\x90CdÌ]DJ¥\\x9a\\x00*JJ\\x13\\x01\\x13\\x02\\x13\\x03À,À+Ì©À0À/Ì¨À')
+104.28.129.37 - - [09/Nov/2025 12:52:11] "\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x95+\x94}\x97cÀj5+fCs¨\x9fÔÊ\x17 ÊÎ1ÚIG\x8a¥u\x08Ý\x02é \x90 ø\x0fVcØUF¢+\x11£SðNÞM*Ð\x17Õ¨\x90CdÌ]DJ¥\x9a\x00*JJ\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À" 400 -
+(1315454) accepted ('104.28.129.37', 18886)
+104.28.129.37 - - [09/Nov/2025 12:52:12] code 400, message Bad request version ('ãçA¹,#\\x98ÿcé¸\\x99\\x15\\x08(Ï\\xad¢-ã¡I¡Tòñý`Ý\\x82©\\x84\\x00*êê\\x13\\x01\\x13\\x02\\x13\\x03À,À+Ì©À0À/Ì¨À')
+104.28.129.37 - - [09/Nov/2025 12:52:12] "\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¦\x0d¦_¬së\x9eh;\x9dx3T!ä\x94´÷+HL\x1fìÏ?A\x7f\x10\x10ê¬ ãçA¹,#\x98ÿcé¸\x99\x15\x08(Ï­¢-ã¡I¡Tòñý`Ý\x82©\x84\x00*êê\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À" 400 -
+104.28.129.37 - - [09/Nov/2025 12:52:12] "GET / HTTP/1.1" 200 1687 0.017146
+104.28.129.37 - - [09/Nov/2025 12:52:12] "GET /static/css/style.css HTTP/1.1" 200 4028 0.102084
+(1315454) accepted ('104.28.129.37', 18640)
+104.28.129.37 - - [09/Nov/2025 12:52:12] "GET /static/js/app.js HTTP/1.1" 200 48997 0.004780
+104.28.129.37 - - [09/Nov/2025 12:52:12] "GET /api/templates HTTP/1.1" 200 791 0.003908
+104.28.129.37 - - [09/Nov/2025 12:52:12] "GET /favicon.ico HTTP/1.1" 404 378 0.000839
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/produkty/2.docx -> /cytrus/oferta/produkty/2.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/produkty/2.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 272716 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] Zapisano w cache: /cytrus/oferta/produkty/2.docx
+[STARTUP] ✓ 2.docx gotowy
+[STARTUP] Pre-generuję 2/8: 4.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/4.docx
+[STARTUP] ✓ 4.docx gotowy
+[STARTUP] Pre-generuję 3/8: 5.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/5.docx
+[STARTUP] ✓ 5.docx gotowy
+[STARTUP] Pre-generuję 4/8: 3.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/3.docx
+[STARTUP] ✓ 3.docx gotowy
+[STARTUP] Pre-generuję 5/8: 6.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/6.docx
+[STARTUP] ✓ 6.docx gotowy
+[STARTUP] Pre-generuję 6/8: 7.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/7.docx
+[STARTUP] ✓ 7.docx gotowy
+[STARTUP] Pre-generuję 7/8: 1.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/produkty/1.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: 1.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/produkty/1.docx
+[ERROR] LibreOffice błąd: Command '['soffice', '--headless', '--convert-to', 'pdf', '--outdir', '/cytrus/oferta/produkty', '/cytrus/oferta/produkty/1.docx']' returned non-zero exit status 1.
+[ERROR] stdout:
+[ERROR] stderr:
+[STARTUP] ✓ 1.docx gotowy
+[STARTUP] Pre-generuję 8/8: 8.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/8.docx
+[STARTUP] ✓ 8.docx gotowy
+[STARTUP] Pre-generowanie zakończone! Cache zawiera 1 produktów
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/produkty/2.docx -> /cytrus/oferta/produkty/2.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/produkty/2.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 272716 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] Zapisano w cache: /cytrus/oferta/produkty/2.docx
+[STARTUP] ✓ 2.docx gotowy
+[STARTUP] Pre-generuję 2/8: 4.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/4.docx
+[STARTUP] ✓ 4.docx gotowy
+[STARTUP] Pre-generuję 3/8: 5.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/5.docx
+[STARTUP] ✓ 5.docx gotowy
+[STARTUP] Pre-generuję 4/8: 3.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/3.docx
+[STARTUP] ✓ 3.docx gotowy
+[STARTUP] Pre-generuję 5/8: 6.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/6.docx
+[STARTUP] ✓ 6.docx gotowy
+[STARTUP] Pre-generuję 6/8: 7.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/7.docx
+[STARTUP] ✓ 7.docx gotowy
+[STARTUP] Pre-generuję 7/8: 1.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/produkty/1.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: 1.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/produkty/1.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/produkty/1.docx -> /cytrus/oferta/produkty/1.pdf using filter : writer_pdf_Export
+Overwriting: /cytrus/oferta/produkty/1.pdf
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/produkty/1.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 277956 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] Zapisano w cache: /cytrus/oferta/produkty/1.docx
+[STARTUP] ✓ 1.docx gotowy
+[STARTUP] Pre-generuję 8/8: 8.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/8.docx
+[STARTUP] ✓ 8.docx gotowy
+[STARTUP] Pre-generowanie zakończone! Cache zawiera 2 produktów
+(1315454) accepted ('194.150.97.113', 58257)
+(1315454) accepted ('194.150.97.113', 61301)
+194.150.97.113 - - [09/Nov/2025 12:54:17] "GET / HTTP/1.1" 200 1687 0.002505
+194.150.97.113 - - [09/Nov/2025 12:54:18] "GET /static/js/app.js HTTP/1.1" 200 48997 0.001666
+194.150.97.113 - - [09/Nov/2025 12:54:18] "GET /static/css/style.css HTTP/1.1" 200 4028 0.002361
+194.150.97.113 - - [09/Nov/2025 12:54:18] "GET /api/templates HTTP/1.1" 200 791 0.001491
+194.150.97.113 - - [09/Nov/2025 12:54:18] "GET /favicon.ico HTTP/1.1" 404 378 0.000614
+194.150.97.113 - - [09/Nov/2025 12:54:29] "GET /api/template/wolftax HTTP/1.1" 200 769 0.175092
+194.150.97.113 - - [09/Nov/2025 12:54:29] "GET /socket.io/?EIO=4&transport=polling&t=PfeTxx4 HTTP/1.1" 200 300 0.000461
+194.150.97.113 - - [09/Nov/2025 12:54:29] "GET /api/products HTTP/1.1" 200 366 0.220679
+(1315454) accepted ('194.150.97.113', 52798)
+(1315454) accepted ('194.150.97.113', 53134)
+================================================================================
+[WebSocket] ✅ Klient połączony! SID: b3OKX1ivVu9RnlWMAAAB
+================================================================================
+194.150.97.113 - - [09/Nov/2025 12:54:29] "POST /socket.io/?EIO=4&transport=polling&t=PfeTxxy&sid=h4m0Y_QXY0GFcApjAAAA HTTP/1.1" 200 224 0.000846
+194.150.97.113 - - [09/Nov/2025 12:54:29] "GET /socket.io/?EIO=4&transport=polling&t=PfeTxxz&sid=h4m0Y_QXY0GFcApjAAAA HTTP/1.1" 200 213 0.000127
+[PREVIEW] Template: wolftax, Produkty: []
+[DISK CACHE] ❌ Brak cache dla: 97fa670326e43e7b1a4ffaf398303cfd
+[CACHE] ❌ MISS - generuję nową ofertę... Key: 97fa670326e43e7b...
+[DEBUG] Używam multi-file template
+[PREVIEW] Przetwarzam: Dok1.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmpbmzefe39.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmpbmzefe39.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmpbmzefe39.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmpbmzefe39.docx -> /cytrus/oferta/static/preview_cache/tmpbmzefe39.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmpbmzefe39.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 173068 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 1 przez WebSocket
+[STREAMING] ✓ Strona 1 wysłana natychmiast!
+[PREVIEW] Przetwarzam: Doc2.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmp50l8u592.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmp50l8u592.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmp50l8u592.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmp50l8u592.docx -> /cytrus/oferta/static/preview_cache/tmp50l8u592.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmp50l8u592.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 83820 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 2 przez WebSocket
+[STREAMING] ✓ Strona 2 wysłana natychmiast!
+[PREVIEW] Przetwarzam: doc3.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmpq6k0lw2x.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmpq6k0lw2x.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmpq6k0lw2x.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmpq6k0lw2x.docx -> /cytrus/oferta/static/preview_cache/tmpq6k0lw2x.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmpq6k0lw2x.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 76824 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 3 przez WebSocket
+[STREAMING] ✓ Strona 3 wysłana natychmiast!
+[DEBUG] Injection point! Wstawiam 0 produktów po doc3.docx
+[PREVIEW] Przetwarzam: doc4.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmp5e0v51j0.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmp5e0v51j0.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmp5e0v51j0.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmp5e0v51j0.docx -> /cytrus/oferta/static/preview_cache/tmp5e0v51j0.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmp5e0v51j0.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 194016 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 4 przez WebSocket
+[STREAMING] ✓ Strona 4 wysłana natychmiast!
+[PREVIEW] Przetwarzam: Dok5.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmpv33shpnx.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmpv33shpnx.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmpv33shpnx.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmpv33shpnx.docx -> /cytrus/oferta/static/preview_cache/tmpv33shpnx.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmpv33shpnx.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 366808 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 5 przez WebSocket
+[STREAMING] ✓ Strona 5 wysłana natychmiast!
+[PREVIEW] Przetwarzam: Dok6.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmpm3fql_kb.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmpm3fql_kb.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmpm3fql_kb.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmpm3fql_kb.docx -> /cytrus/oferta/static/preview_cache/tmpm3fql_kb.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmpm3fql_kb.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 102236 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 6 przez WebSocket
+[STREAMING] ✓ Strona 6 wysłana natychmiast!
+[DEBUG] Multi-file: produkty już wstawione w injection point
+[DEBUG] Streaming zakończony - 6 stron
+194.150.97.113 - - [09/Nov/2025 12:56:06] "POST /api/preview-full-offer HTTP/1.1" 200 387 96.143580
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/wsgi.py", line 614, in handle_one_response
+    result = self.application(self.environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1478, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/flask_socketio/__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+  File "/usr/local/lib/python3.10/dist-packages/engineio/middleware.py", line 63, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/socketio/server.py", line 428, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/engineio/server.py", line 286, in handle_request
+    packets = socket.handle_get_request(
+  File "/usr/local/lib/python3.10/dist-packages/engineio/socket.py", line 92, in handle_get_request
+    return getattr(self, '_upgrade_' + transport)(environ,
+  File "/usr/local/lib/python3.10/dist-packages/engineio/socket.py", line 151, in _upgrade_websocket
+    return ws(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/engineio/async_drivers/eventlet.py", line 42, in __call__
+    return super().__call__(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 141, in __call__
+    self.handler(ws)
+  File "/usr/local/lib/python3.10/dist-packages/engineio/socket.py", line 172, in _websocket_handler
+    pkt = websocket_wait()
+  File "/usr/local/lib/python3.10/dist-packages/engineio/socket.py", line 156, in websocket_wait
+    data = ws.wait()
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 825, in wait
+    for i in self.iterator:
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 666, in _iter_frames
+    message = self._recv_frame(message=fragmented_message)
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 692, in _recv_frame
+    header = recv(2)
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 594, in _get_bytes
+    d = self.socket.recv(numbytes - len(data))
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/greenio/base.py", line 352, in recv
+    return self._recv_loop(self.fd.recv, b'', bufsize, flags)
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/greenio/base.py", line 346, in _recv_loop
+    self._read_trampoline()
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/greenio/base.py", line 314, in _read_trampoline
+    self._trampoline(
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/greenio/base.py", line 206, in _trampoline
+    return trampoline(fd, read=read, write=write, timeout=timeout,
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/hubs/__init__.py", line 157, in trampoline
+    return hub.switch()
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/hubs/hub.py", line 310, in switch
+    return self.greenlet.switch()
+TimeoutError: timed out
+
+194.150.97.113 - - [09/Nov/2025 12:56:06] "GET /socket.io/?EIO=4&transport=websocket&sid=h4m0Y_QXY0GFcApjAAAA HTTP/1.1" 500 0 96.211973
+194.150.97.113 - - [09/Nov/2025 12:56:06] "GET /socket.io/?EIO=4&transport=polling&t=PfeTx_i&sid=h4m0Y_QXY0GFcApjAAAA HTTP/1.1" 200 181 0.000158
+[WebSocket] ❌ Klient rozłączony: b3OKX1ivVu9RnlWMAAAB
+194.150.97.113 - - [09/Nov/2025 12:56:06] "POST /socket.io/?EIO=4&transport=polling&t=PfeU77X&sid=h4m0Y_QXY0GFcApjAAAA HTTP/1.1" 200 224 0.000535
+(1315454) accepted ('104.28.129.37', 18591)
+(1315454) accepted ('104.28.129.37', 18625)
+(1315454) accepted ('194.150.97.113', 61208)
+(1315454) accepted ('194.150.97.113', 55007)
+(1315454) accepted ('194.150.97.113', 54102)
+104.28.129.37 - - [09/Nov/2025 12:56:06] "GET /api/template/wolftax HTTP/1.1" 200 769 0.387917
+104.28.129.37 - - [09/Nov/2025 12:56:06] "GET / HTTP/1.1" 200 1687 0.001108
+194.150.97.113 - - [09/Nov/2025 12:56:06] "GET /socket.io/?EIO=4&transport=polling&t=PfeU7Mq HTTP/1.1" 200 300 0.000304
+194.150.97.113 - - [09/Nov/2025 12:56:06] "GET /socket.io/?EIO=4&transport=polling&t=PfeUCbS HTTP/1.1" 200 300 0.000170
+194.150.97.113 - - [09/Nov/2025 12:56:06] "GET / HTTP/1.1" 200 1687 0.000736
+194.150.97.113 - - [09/Nov/2025 12:56:06] "GET /socket.io/?EIO=4&transport=polling&t=PfeUIFR HTTP/1.1" 200 300 0.000169
+================================================================================
+[WebSocket] ✅ Klient połączony! SID: 4O7JG3hv9ba1csKSAAAF
+================================================================================
+194.150.97.113 - - [09/Nov/2025 12:56:06] "POST /socket.io/?EIO=4&transport=polling&t=PfeUJax&sid=cktMVVp0InxTp3ehAAAE HTTP/1.1" 200 224 0.000898
+194.150.97.113 - - [09/Nov/2025 12:56:06] "GET /socket.io/?EIO=4&transport=polling&t=PfeUJay&sid=cktMVVp0InxTp3ehAAAE HTTP/1.1" 200 213 0.001502
+194.150.97.113 - - [09/Nov/2025 12:56:06] "GET /static/css/style.css HTTP/1.1" 200 4028 0.021131
+194.150.97.113 - - [09/Nov/2025 12:56:06] "GET /static/js/app.js HTTP/1.1" 304 229 0.001257
+194.150.97.113 - - [09/Nov/2025 12:56:06] "GET /api/templates HTTP/1.1" 200 791 0.004118
+194.150.97.113 - - [09/Nov/2025 12:56:09] "GET /api/template/wolftax HTTP/1.1" 200 769 0.248957
+194.150.97.113 - - [09/Nov/2025 12:56:09] "GET /socket.io/?EIO=4&transport=polling&t=PfeUKFK HTTP/1.1" 200 300 0.000300
+194.150.97.113 - - [09/Nov/2025 12:56:09] "GET /api/products HTTP/1.1" 200 366 0.291948
+================================================================================
+[WebSocket] ✅ Klient połączony! SID: _Bc8VbdW60e4X0Y9AAAH
+================================================================================
+194.150.97.113 - - [09/Nov/2025 12:56:09] "POST /socket.io/?EIO=4&transport=polling&t=PfeUKGZ&sid=-fZZA4leRrE1Gvt6AAAG HTTP/1.1" 200 224 0.000969
+(1315454) accepted ('194.150.97.113', 54181)
+194.150.97.113 - - [09/Nov/2025 12:56:09] "GET /socket.io/?EIO=4&transport=polling&t=PfeUKGb&sid=-fZZA4leRrE1Gvt6AAAG HTTP/1.1" 200 213 0.000192
+194.150.97.113 - - [09/Nov/2025 12:56:09] "GET /socket.io/?EIO=4&transport=polling&t=PfeUKLP&sid=-fZZA4leRrE1Gvt6AAAG HTTP/1.1" 200 181 0.000203
+[PREVIEW] Template: wolftax, Produkty: []
+[DISK CACHE] ❌ Brak cache dla: 97fa670326e43e7b1a4ffaf398303cfd
+[CACHE] ❌ MISS - generuję nową ofertę... Key: 97fa670326e43e7b...
+[DEBUG] Używam multi-file template
+[PREVIEW] Przetwarzam: Dok1.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmp82vom2fk.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmp82vom2fk.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmp82vom2fk.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmp82vom2fk.docx -> /cytrus/oferta/static/preview_cache/tmp82vom2fk.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmp82vom2fk.pdf
+[DEBUG] Konwertuję PDF → PNG
+^C[DEBUG] Wygenerowano 0 stron
+[DEBUG] Usunięto tymczasowy PDF
+[PREVIEW] Przetwarzam: Doc2.docx
+root@w256:/cytrus/oferta# python app.py
+================================================================================
+[STARTUP] 🚀 Inicjalizacja systemu...
+================================================================================
+[UNOSERVER] ✓ Unoserver już działa
+[STARTUP] Uruchamiam pre-loading w tle...
+[STARTUP] Pre-generowanie produktów...
+================================================================================
+[STARTUP] ✅ System gotowy do pracy!
+================================================================================
+ * Restarting with watchdog (inotify)
+[STARTUP] 💡 INTELIGENTNY SYSTEM CACHE
+================================================================================
+[STARTUP] Znaleziono 8 produktów do pre-generowania
+[STARTUP] Pre-generuję 1/8: 2.docx
+[STARTUP] ℹ️  Szablony będą renderowane ON-DEMAND (szybsze!)
+[STARTUP] ℹ️  Produkty są pre-renderowane (gotowe do użycia)
+================================================================================
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/produkty/2.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: 2.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/produkty/2.docx
+================================================================================
+[STARTUP] 🚀 Inicjalizacja systemu...
+================================================================================
+[UNOSERVER] ✓ Unoserver już działa
+[STARTUP] Uruchamiam pre-loading w tle...
+[STARTUP] Pre-generowanie produktów...
+[STARTUP] Znaleziono 8 produktów do pre-generowania
+[STARTUP] Pre-generuję 1/8: 2.docx
+================================================================================
+[STARTUP] ✅ System gotowy do pracy!
+================================================================================
+ * Debugger is active!
+[STARTUP] 💡 INTELIGENTNY SYSTEM CACHE
+================================================================================
+[STARTUP] ℹ️  Szablony będą renderowane ON-DEMAND (szybsze!)
+[STARTUP] ℹ️  Produkty są pre-renderowane (gotowe do użycia)
+================================================================================
+ * Debugger PIN: 186-183-960
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/produkty/2.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: 2.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/produkty/2.docx
+(1318954) wsgi starting up on http://0.0.0.0:40207
+(1318954) accepted ('194.150.97.113', 62776)
+(1318954) accepted ('194.150.97.113', 57556)
+194.150.97.113 - - [09/Nov/2025 12:57:14] "GET / HTTP/1.1" 200 1687 0.006902
+194.150.97.113 - - [09/Nov/2025 12:57:14] "GET /static/css/style.css HTTP/1.1" 200 4028 0.024145
+194.150.97.113 - - [09/Nov/2025 12:57:14] "GET /static/js/app.js HTTP/1.1" 304 229 0.011365
+194.150.97.113 - - [09/Nov/2025 12:57:14] "GET /api/templates HTTP/1.1" 200 791 0.001466
+(1318954) accepted ('194.150.97.113', 50639)
+194.150.97.113 - - [09/Nov/2025 12:57:16] "GET /api/template/wolftax HTTP/1.1" 200 769 0.427053
+194.150.97.113 - - [09/Nov/2025 12:57:16] "GET /socket.io/?EIO=4&transport=polling&t=PfeUabw HTTP/1.1" 200 300 0.000415
+194.150.97.113 - - [09/Nov/2025 12:57:16] "GET /api/products HTTP/1.1" 200 366 0.524195
+================================================================================
+[WebSocket] ✅ Klient połączony! SID: 4d1yfCRwBxNz5f7JAAAB
+================================================================================
+194.150.97.113 - - [09/Nov/2025 12:57:16] "POST /socket.io/?EIO=4&transport=polling&t=PfeUacm&sid=ELskau3U_yPD-_5NAAAA HTTP/1.1" 200 224 0.078652
+(1318954) accepted ('194.150.97.113', 59941)
+194.150.97.113 - - [09/Nov/2025 12:57:16] "GET /socket.io/?EIO=4&transport=polling&t=PfeUacn&sid=ELskau3U_yPD-_5NAAAA HTTP/1.1" 200 213 0.080683
+[PREVIEW] Template: wolftax, Produkty: []
+[DISK CACHE] ❌ Brak cache dla: 97fa670326e43e7b1a4ffaf398303cfd
+[CACHE] ❌ MISS - generuję nową ofertę... Key: 97fa670326e43e7b...
+[DEBUG] Używam multi-file template
+[PREVIEW] Przetwarzam: Dok1.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmp6wi9ga7a.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmp6wi9ga7a.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/produkty/2.docx -> /cytrus/oferta/produkty/2.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/produkty/2.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 272716 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] Zapisano w cache: /cytrus/oferta/produkty/2.docx
+[STARTUP] ✓ 2.docx gotowy
+[STARTUP] Pre-generuję 2/8: 4.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/4.docx
+[STARTUP] ✓ 4.docx gotowy
+[STARTUP] Pre-generuję 3/8: 5.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/5.docx
+[STARTUP] ✓ 5.docx gotowy
+[STARTUP] Pre-generuję 4/8: 3.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/3.docx
+[STARTUP] ✓ 3.docx gotowy
+[STARTUP] Pre-generuję 5/8: 6.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/6.docx
+[STARTUP] ✓ 6.docx gotowy
+[STARTUP] Pre-generuję 6/8: 7.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/7.docx
+[STARTUP] ✓ 7.docx gotowy
+[STARTUP] Pre-generuję 7/8: 1.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/produkty/1.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: 1.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/produkty/1.docx
+[ERROR] LibreOffice błąd: Command '['soffice', '--headless', '--convert-to', 'pdf', '--outdir', '/cytrus/oferta/produkty', '/cytrus/oferta/produkty/1.docx']' returned non-zero exit status 1.
+[ERROR] stdout:
+[ERROR] stderr:
+[STARTUP] ✓ 1.docx gotowy
+[STARTUP] Pre-generuję 8/8: 8.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/8.docx
+[STARTUP] ✓ 8.docx gotowy
+[STARTUP] Pre-generowanie zakończone! Cache zawiera 1 produktów
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/produkty/2.docx -> /cytrus/oferta/produkty/2.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/produkty/2.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmp6wi9ga7a.docx
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 272716 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] Zapisano w cache: /cytrus/oferta/produkty/2.docx
+[STARTUP] ✓ 2.docx gotowy
+[STARTUP] Pre-generuję 2/8: 4.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/4.docx
+[STARTUP] ✓ 4.docx gotowy
+[STARTUP] Pre-generuję 3/8: 5.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/5.docx
+[STARTUP] ✓ 5.docx gotowy
+[STARTUP] Pre-generuję 4/8: 3.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/3.docx
+[STARTUP] ✓ 3.docx gotowy
+[STARTUP] Pre-generuję 5/8: 6.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/6.docx
+[STARTUP] ✓ 6.docx gotowy
+[STARTUP] Pre-generuję 6/8: 7.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/7.docx
+[STARTUP] ✓ 7.docx gotowy
+[STARTUP] Pre-generuję 7/8: 1.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/produkty/1.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: 1.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmp6wi9ga7a.docx -> /cytrus/oferta/static/preview_cache/tmp6wi9ga7a.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmp6wi9ga7a.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/produkty/1.docx
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 173068 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 1 przez WebSocket
+[STREAMING] ✓ Strona 1 wysłana natychmiast!
+[PREVIEW] Przetwarzam: Doc2.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmpck4h9nna.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmpck4h9nna.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/produkty/1.docx -> /cytrus/oferta/produkty/1.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/produkty/1.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmpck4h9nna.docx
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 277956 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] Zapisano w cache: /cytrus/oferta/produkty/1.docx
+[STARTUP] ✓ 1.docx gotowy
+[STARTUP] Pre-generuję 8/8: 8.docx
+[CACHE] ⚡ Używam cache dla: /cytrus/oferta/produkty/8.docx
+[STARTUP] ✓ 8.docx gotowy
+[STARTUP] Pre-generowanie zakończone! Cache zawiera 2 produktów
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmpck4h9nna.docx -> /cytrus/oferta/static/preview_cache/tmpck4h9nna.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmpck4h9nna.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 83820 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 2 przez WebSocket
+[STREAMING] ✓ Strona 2 wysłana natychmiast!
+[PREVIEW] Przetwarzam: doc3.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmpbejfyj6z.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmpbejfyj6z.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmpbejfyj6z.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmpbejfyj6z.docx -> /cytrus/oferta/static/preview_cache/tmpbejfyj6z.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmpbejfyj6z.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 76824 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 3 przez WebSocket
+[STREAMING] ✓ Strona 3 wysłana natychmiast!
+[DEBUG] Injection point! Wstawiam 0 produktów po doc3.docx
+[PREVIEW] Przetwarzam: doc4.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmp9ri3cr65.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmp9ri3cr65.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmp9ri3cr65.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmp9ri3cr65.docx -> /cytrus/oferta/static/preview_cache/tmp9ri3cr65.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmp9ri3cr65.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 194016 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 4 przez WebSocket
+[STREAMING] ✓ Strona 4 wysłana natychmiast!
+[PREVIEW] Przetwarzam: Dok5.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmpp3lisgq_.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmpp3lisgq_.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmpp3lisgq_.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmpp3lisgq_.docx -> /cytrus/oferta/static/preview_cache/tmpp3lisgq_.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmpp3lisgq_.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 366808 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 5 przez WebSocket
+[STREAMING] ✓ Strona 5 wysłana natychmiast!
+[PREVIEW] Przetwarzam: Dok6.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmpw_6kquhi.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmpw_6kquhi.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmpw_6kquhi.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmpw_6kquhi.docx -> /cytrus/oferta/static/preview_cache/tmpw_6kquhi.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmpw_6kquhi.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 102236 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 6 przez WebSocket
+[STREAMING] ✓ Strona 6 wysłana natychmiast!
+[DEBUG] Multi-file: produkty już wstawione w injection point
+[DEBUG] Streaming zakończony - 6 stron
+194.150.97.113 - - [09/Nov/2025 12:59:22] "POST /api/preview-full-offer HTTP/1.1" 200 387 125.215209
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/wsgi.py", line 614, in handle_one_response
+    result = self.application(self.environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1478, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/flask_socketio/__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+  File "/usr/local/lib/python3.10/dist-packages/engineio/middleware.py", line 63, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/socketio/server.py", line 428, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/engineio/server.py", line 286, in handle_request
+    packets = socket.handle_get_request(
+  File "/usr/local/lib/python3.10/dist-packages/engineio/socket.py", line 92, in handle_get_request
+    return getattr(self, '_upgrade_' + transport)(environ,
+  File "/usr/local/lib/python3.10/dist-packages/engineio/socket.py", line 151, in _upgrade_websocket
+    return ws(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/engineio/async_drivers/eventlet.py", line 42, in __call__
+    return super().__call__(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 141, in __call__
+    self.handler(ws)
+  File "/usr/local/lib/python3.10/dist-packages/engineio/socket.py", line 172, in _websocket_handler
+    pkt = websocket_wait()
+  File "/usr/local/lib/python3.10/dist-packages/engineio/socket.py", line 156, in websocket_wait
+    data = ws.wait()
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 825, in wait
+    for i in self.iterator:
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 666, in _iter_frames
+    message = self._recv_frame(message=fragmented_message)
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 692, in _recv_frame
+    header = recv(2)
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 594, in _get_bytes
+    d = self.socket.recv(numbytes - len(data))
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/greenio/base.py", line 352, in recv
+    return self._recv_loop(self.fd.recv, b'', bufsize, flags)
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/greenio/base.py", line 346, in _recv_loop
+    self._read_trampoline()
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/greenio/base.py", line 314, in _read_trampoline
+    self._trampoline(
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/greenio/base.py", line 206, in _trampoline
+    return trampoline(fd, read=read, write=write, timeout=timeout,
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/hubs/__init__.py", line 157, in trampoline
+    return hub.switch()
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/hubs/hub.py", line 310, in switch
+    return self.greenlet.switch()
+TimeoutError: timed out
+
+194.150.97.113 - - [09/Nov/2025 12:59:22] "GET /socket.io/?EIO=4&transport=websocket&sid=ELskau3U_yPD-_5NAAAA HTTP/1.1" 500 0 125.225571
+[WebSocket] ❌ Klient rozłączony: 4d1yfCRwBxNz5f7JAAAB
+194.150.97.113 - - [09/Nov/2025 12:59:22] "POST /socket.io/?EIO=4&transport=polling&t=PfeUlbx&sid=ELskau3U_yPD-_5NAAAA HTTP/1.1" 200 224 0.000522
+(1318954) accepted ('194.150.97.113', 59488)
+(1318954) accepted ('194.150.97.113', 54428)
+(1318954) accepted ('194.150.97.113', 51628)
+'Session is disconnected' ELskau3U_yPD-_5NAAAA (further occurrences of this error will be logged with level INFO)
+194.150.97.113 - - [09/Nov/2025 12:59:22] "GET /socket.io/?EIO=4&transport=polling&t=PfeUamJ&sid=ELskau3U_yPD-_5NAAAA HTTP/1.1" 400 223 0.000212
+194.150.97.113 - - [09/Nov/2025 12:59:22] "GET /socket.io/?EIO=4&transport=polling&t=PfeUlxb HTTP/1.1" 200 300 0.000218
+[PREVIEW] Template: wolftax, Produkty: []
+[DISK CACHE] ❌ Brak cache dla: 97fa670326e43e7b1a4ffaf398303cfd
+[CACHE] ❌ MISS - generuję nową ofertę... Key: 97fa670326e43e7b...
+[DEBUG] Używam multi-file template
+[PREVIEW] Przetwarzam: Dok1.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmp09akafvd.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmp09akafvd.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmp09akafvd.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmp09akafvd.docx -> /cytrus/oferta/static/preview_cache/tmp09akafvd.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmp09akafvd.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 173068 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 1 przez WebSocket
+[STREAMING] ✓ Strona 1 wysłana natychmiast!
+[PREVIEW] Przetwarzam: Doc2.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmplfr74ebp.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmplfr74ebp.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmplfr74ebp.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmplfr74ebp.docx -> /cytrus/oferta/static/preview_cache/tmplfr74ebp.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmplfr74ebp.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 83820 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 2 przez WebSocket
+[STREAMING] ✓ Strona 2 wysłana natychmiast!
+[PREVIEW] Przetwarzam: doc3.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmp7amtvxnq.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmp7amtvxnq.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmp7amtvxnq.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmp7amtvxnq.docx -> /cytrus/oferta/static/preview_cache/tmp7amtvxnq.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmp7amtvxnq.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 76824 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 3 przez WebSocket
+[STREAMING] ✓ Strona 3 wysłana natychmiast!
+[DEBUG] Injection point! Wstawiam 0 produktów po doc3.docx
+[PREVIEW] Przetwarzam: doc4.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmphv7yb4pv.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmphv7yb4pv.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmphv7yb4pv.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmphv7yb4pv.docx -> /cytrus/oferta/static/preview_cache/tmphv7yb4pv.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmphv7yb4pv.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 194016 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 4 przez WebSocket
+[STREAMING] ✓ Strona 4 wysłana natychmiast!
+[PREVIEW] Przetwarzam: Dok5.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmp2ckv1m8b.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmp2ckv1m8b.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmp2ckv1m8b.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmp2ckv1m8b.docx -> /cytrus/oferta/static/preview_cache/tmp2ckv1m8b.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmp2ckv1m8b.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 366808 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 5 przez WebSocket
+[STREAMING] ✓ Strona 5 wysłana natychmiast!
+[PREVIEW] Przetwarzam: Dok6.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmpvp1wqwe7.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmpvp1wqwe7.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmpvp1wqwe7.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmpvp1wqwe7.docx -> /cytrus/oferta/static/preview_cache/tmpvp1wqwe7.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmpvp1wqwe7.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 102236 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 6 przez WebSocket
+[STREAMING] ✓ Strona 6 wysłana natychmiast!
+[DEBUG] Multi-file: produkty już wstawione w injection point
+[DEBUG] Streaming zakończony - 6 stron
+194.150.97.113 - - [09/Nov/2025 13:00:46] "POST /api/preview-full-offer HTTP/1.1" 200 387 84.469027
+194.150.97.113 - - [09/Nov/2025 13:00:46] "GET /socket.io/?EIO=4&transport=polling&t=PfeUrOQ HTTP/1.1" 200 300 0.000330
+194.150.97.113 - - [09/Nov/2025 13:00:46] "GET /socket.io/?EIO=4&transport=polling&t=PfeV7it HTTP/1.1" 200 300 0.000211
+194.150.97.113 - - [09/Nov/2025 13:00:46] "GET /socket.io/?EIO=4&transport=polling&t=PfeUxVL HTTP/1.1" 200 300 0.000187
+194.150.97.113 - - [09/Nov/2025 13:00:46] "GET /socket.io/?EIO=4&transport=polling&t=PfeV1c5 HTTP/1.1" 200 300 0.000185
+194.150.97.113 - - [09/Nov/2025 13:00:46] "GET / HTTP/1.1" 200 1687 0.001128
+194.150.97.113 - - [09/Nov/2025 13:00:46] "GET /socket.io/?EIO=4&transport=polling&t=PfeVDpj HTTP/1.1" 200 300 0.000239
+194.150.97.113 - - [09/Nov/2025 13:00:46] "GET /socket.io/?EIO=4&transport=polling&t=PfeVJwb HTTP/1.1" 200 300 0.000322
+194.150.97.113 - - [09/Nov/2025 13:00:46] "GET /static/css/style.css HTTP/1.1" 200 4028 0.006457
+194.150.97.113 - - [09/Nov/2025 13:00:46] "GET /static/js/app.js HTTP/1.1" 304 229 0.008723
+194.150.97.113 - - [09/Nov/2025 13:00:46] "GET /api/templates HTTP/1.1" 200 791 0.002980
+194.150.97.113 - - [09/Nov/2025 13:00:50] "GET /api/template/wolftax HTTP/1.1" 200 769 0.217442
+194.150.97.113 - - [09/Nov/2025 13:00:50] "GET /socket.io/?EIO=4&transport=polling&t=PfeVOqV HTTP/1.1" 200 300 0.000489
+194.150.97.113 - - [09/Nov/2025 13:00:50] "GET /api/products HTTP/1.1" 200 366 0.206488
+(1318954) accepted ('194.150.97.113', 53490)
+================================================================================
+[WebSocket] ✅ Klient połączony! SID: 6HvKvtPtOQFNttEFAAAK
+================================================================================
+194.150.97.113 - - [09/Nov/2025 13:00:50] "POST /socket.io/?EIO=4&transport=polling&t=PfeVOrG&sid=WvRildCNj36b8lXfAAAJ HTTP/1.1" 200 224 0.001065
+194.150.97.113 - - [09/Nov/2025 13:00:50] "GET /socket.io/?EIO=4&transport=polling&t=PfeVOrH&sid=WvRildCNj36b8lXfAAAJ HTTP/1.1" 200 213 0.002446
+[PREVIEW] Template: wolftax, Produkty: []
+[DISK CACHE] ❌ Brak cache dla: 97fa670326e43e7b1a4ffaf398303cfd
+[CACHE] ❌ MISS - generuję nową ofertę... Key: 97fa670326e43e7b...
+[DEBUG] Używam multi-file template
+[PREVIEW] Przetwarzam: Dok1.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmp_kg4hmjs.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmp_kg4hmjs.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmp_kg4hmjs.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmp_kg4hmjs.docx -> /cytrus/oferta/static/preview_cache/tmp_kg4hmjs.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmp_kg4hmjs.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 173068 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 1 przez WebSocket
+[STREAMING] ✓ Strona 1 wysłana natychmiast!
+[PREVIEW] Przetwarzam: Doc2.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmpmct90vud.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmpmct90vud.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmpmct90vud.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmpmct90vud.docx -> /cytrus/oferta/static/preview_cache/tmpmct90vud.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmpmct90vud.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 83820 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 2 przez WebSocket
+[STREAMING] ✓ Strona 2 wysłana natychmiast!
+[PREVIEW] Przetwarzam: doc3.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmpv8rfmhk0.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmpv8rfmhk0.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmpv8rfmhk0.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmpv8rfmhk0.docx -> /cytrus/oferta/static/preview_cache/tmpv8rfmhk0.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmpv8rfmhk0.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 76824 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 3 przez WebSocket
+[STREAMING] ✓ Strona 3 wysłana natychmiast!
+[DEBUG] Injection point! Wstawiam 0 produktów po doc3.docx
+[PREVIEW] Przetwarzam: doc4.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmpdi3gkdx8.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmpdi3gkdx8.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmpdi3gkdx8.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmpdi3gkdx8.docx -> /cytrus/oferta/static/preview_cache/tmpdi3gkdx8.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmpdi3gkdx8.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 194016 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 4 przez WebSocket
+[STREAMING] ✓ Strona 4 wysłana natychmiast!
+[PREVIEW] Przetwarzam: Dok5.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmpxzse3zoq.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmpxzse3zoq.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmpxzse3zoq.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmpxzse3zoq.docx -> /cytrus/oferta/static/preview_cache/tmpxzse3zoq.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmpxzse3zoq.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 366808 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 5 przez WebSocket
+[STREAMING] ✓ Strona 5 wysłana natychmiast!
+[PREVIEW] Przetwarzam: Dok6.docx
+[CONVERT] Rozpoczynam konwersję: /cytrus/oferta/static/preview_cache/tmp00wxptli.docx
+[CONVERT] 🚀 Używam app4.py (SUPER FAST)...
+[APP4] Czekam na dostęp do unoserver...
+[APP4] 🚀 START: tmp00wxptli.docx
+[APP4] ❌ Brak app4.py w /cytrus/oferta
+[CONVERT] ⚠️ APP4 failed, fallback do LibreOffice...
+[CONVERT] Fallback: LibreOffice + pdf2image
+[DEBUG] Znaleziono LibreOffice: soffice
+[DEBUG] Konwertuję DOCX → PDF: /cytrus/oferta/static/preview_cache/tmp00wxptli.docx
+[DEBUG] LibreOffice stdout: convert /cytrus/oferta/static/preview_cache/tmp00wxptli.docx -> /cytrus/oferta/static/preview_cache/tmp00wxptli.pdf using filter : writer_pdf_Export
+
+[DEBUG] LibreOffice stderr:
+[DEBUG] PDF utworzony: /cytrus/oferta/static/preview_cache/tmp00wxptli.pdf
+[DEBUG] Konwertuję PDF → PNG
+[DEBUG] Wygenerowano 1 stron
+[DEBUG] Strona 1 skonwertowana (rozmiar: 102236 znaków, format: JPEG)
+[DEBUG] Usunięto tymczasowy PDF
+[DEBUG] ✓ Wysłano stronę 6 przez WebSocket
+[STREAMING] ✓ Strona 6 wysłana natychmiast!
+[DEBUG] Multi-file: produkty już wstawione w injection point
+[DEBUG] Streaming zakończony - 6 stron
+194.150.97.113 - - [09/Nov/2025 13:03:28] "POST /api/preview-full-offer HTTP/1.1" 200 387 157.631173
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/wsgi.py", line 614, in handle_one_response
+    result = self.application(self.environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1478, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/flask_socketio/__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+  File "/usr/local/lib/python3.10/dist-packages/engineio/middleware.py", line 63, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/socketio/server.py", line 428, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/engineio/server.py", line 286, in handle_request
+    packets = socket.handle_get_request(
+  File "/usr/local/lib/python3.10/dist-packages/engineio/socket.py", line 92, in handle_get_request
+    return getattr(self, '_upgrade_' + transport)(environ,
+  File "/usr/local/lib/python3.10/dist-packages/engineio/socket.py", line 151, in _upgrade_websocket
+    return ws(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/engineio/async_drivers/eventlet.py", line 42, in __call__
+    return super().__call__(environ, start_response)
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 141, in __call__
+    self.handler(ws)
+  File "/usr/local/lib/python3.10/dist-packages/engineio/socket.py", line 172, in _websocket_handler
+    pkt = websocket_wait()
+  File "/usr/local/lib/python3.10/dist-packages/engineio/socket.py", line 156, in websocket_wait
+    data = ws.wait()
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 825, in wait
+    for i in self.iterator:
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 666, in _iter_frames
+    message = self._recv_frame(message=fragmented_message)
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 692, in _recv_frame
+    header = recv(2)
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/websocket.py", line 594, in _get_bytes
+    d = self.socket.recv(numbytes - len(data))
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/greenio/base.py", line 352, in recv
+    return self._recv_loop(self.fd.recv, b'', bufsize, flags)
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/greenio/base.py", line 346, in _recv_loop
+    self._read_trampoline()
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/greenio/base.py", line 314, in _read_trampoline
+    self._trampoline(
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/greenio/base.py", line 206, in _trampoline
+    return trampoline(fd, read=read, write=write, timeout=timeout,
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/hubs/__init__.py", line 157, in trampoline
+    return hub.switch()
+  File "/usr/local/lib/python3.10/dist-packages/eventlet/hubs/hub.py", line 310, in switch
+    return self.greenlet.switch()
+TimeoutError: timed out
+
+194.150.97.113 - - [09/Nov/2025 13:03:28] "GET /socket.io/?EIO=4&transport=websocket&sid=WvRildCNj36b8lXfAAAJ HTTP/1.1" 500 0 157.682000
+[WebSocket] ❌ Klient rozłączony: 6HvKvtPtOQFNttEFAAAK
+194.150.97.113 - - [09/Nov/2025 13:03:28] "POST /socket.io/?EIO=4&transport=polling&t=PfeVX1Z&sid=WvRildCNj36b8lXfAAAJ HTTP/1.1" 200 224 0.000901
+194.150.97.113 - - [09/Nov/2025 13:03:28] "GET /socket.io/?EIO=4&transport=polling&t=PfeVOud&sid=WvRildCNj36b8lXfAAAJ HTTP/1.1" 400 223 0.000186

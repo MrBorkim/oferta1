@@ -1,0 +1,62 @@
+{
+  "name": "Szablon oferty AIDROPS",
+  "description": "Szablon oferty z dynamicznym wstawianiem produktów jako osobnych plików DOCX między stroną 1 a 2.",
+  "template_file": "oferta1.docx",
+  "injection_point": {
+    "type": "page_break",
+    "after_paragraph_containing": "Opis: \t\t{{opis}}"
+  },
+  "placeholders": {
+    "KLIENT(NIP)": {
+      "label": "NIP klienta",
+      "type": "text",
+      "required": true
+    },
+    "Oferta z dnia": {
+      "label": "Data oferty",
+      "type": "date",
+      "required": true
+    },
+    "waznado": {
+      "label": "Oferta ważna do",
+      "type": "date",
+      "required": true
+    },
+    "firmaM": {
+      "label": "Nazwa Twojej firmy",
+      "type": "text",
+      "required": true
+    },
+    "temat": {
+      "label": "Temat zlecenia",
+      "type": "text"
+    },
+    "kategoria": {
+      "label": "Kategoria",
+      "type": "text"
+    },
+    "opis": {
+      "label": "Opis zlecenia",
+      "type": "textarea"
+    },
+    "produkty": {
+      "label": "Lista produktów",
+      "type": "list_of_docx",
+      "description": "Każdy produkt jako osobny plik DOCX",
+      "min": 1,
+      "max": 20
+    },
+    "cena": {
+      "label": "Cena usługi (PLN)",
+      "type": "number"
+    },
+    "RBG": {
+      "label": "Limit roboczogodzin",
+      "type": "number"
+    },
+    "uzasadnienie": {
+      "label": "Uzasadnienie kosztu",
+      "type": "textarea"
+    }
+  }
+}

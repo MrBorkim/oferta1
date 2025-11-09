@@ -1,0 +1,45 @@
+{
+  "templates": [
+    {
+      "id": "aidrops",
+      "name": "AIDROPS - Szablon klasyczny",
+      "description": "Oryginalny szablon z pojedynczym plikiem DOCX",
+      "type": "single_file",
+      "folder": ".",
+      "main_file": "oferta1.docx",
+      "config_file": "oferta1.json",
+      "supports_products": true,
+      "injection_point": {
+        "type": "after_paragraph",
+        "marker": "Opis: \t\t{{opis}}"
+      }
+    },
+    {
+      "id": "wolftax",
+      "name": "WolfTax - Szablon wielostronicowy",
+      "description": "Nowoczesny szablon z osobnymi plikami dla każdej strony",
+      "type": "multi_file",
+      "folder": "wolftax-oferta",
+      "files": [
+        {"file": "Dok1.docx", "order": 1, "name": "Strona tytułowa"},
+        {"file": "Doc2.docx", "order": 2, "name": "Wprowadzenie"},
+        {"file": "doc3.docx", "order": 3, "name": "Spis treści", "is_toc": true},
+        {"file": "doc4.docx", "order": 4, "name": "Podsumowanie"},
+        {"file": "Dok5.docx", "order": 5, "name": "Warunki"},
+        {"file": "Dok6.docx", "order": 6, "name": "Strona końcowa"}
+      ],
+      "supports_products": true,
+      "injection_point": {
+        "type": "between_files",
+        "after": "doc3.docx",
+        "before": "doc4.docx"
+      },
+      "toc": {
+        "enabled": true,
+        "file": "doc3.docx",
+        "format": "§\tUsługa {number} – {title} ………….……………..…………………………….……………  {page}",
+        "start_page": 5
+      }
+    }
+  ]
+}

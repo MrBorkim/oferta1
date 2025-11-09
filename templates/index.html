@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Ofertowania - Multi-Template</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Template Selector Screen -->
+    <div id="template-selector" class="template-selector">
+        <div class="template-selector-overlay">
+            <div class="template-selector-content">
+                <h1>📋 Wybierz szablon oferty</h1>
+                <p class="subtitle">Wybierz szablon, który chcesz użyć do utworzenia oferty</p>
+
+                <div id="template-options" class="template-options">
+                    <!-- Dynamically loaded templates -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-container" style="display: none;">
+        <!-- Lewa strona - Formularz -->
+        <div class="left-panel">
+            <header class="panel-header">
+                <h1>System Ofertowania</h1>
+                <p class="subtitle">Utwórz profesjonalną ofertę</p>
+            </header>
+
+            <!-- Panel akcji -->
+            <div class="action-panel">
+                <button id="btn-save" class="btn btn-success">💾 Zapisz</button>
+                <button id="btn-load" class="btn btn-info">📂 Wczytaj</button>
+                <button id="btn-generate" class="btn btn-warning">📄 Generuj DOCX</button>
+            </div>
+
+            <!-- Formularz -->
+            <div class="form-section">
+                <h2>📋 Dane Oferty</h2>
+                <form id="offer-form">
+                    <div id="form-fields"></div>
+                </form>
+            </div>
+
+            <!-- Sekcja wyboru produktów -->
+            <div class="products-section">
+                <h2>🛍️ Produkty</h2>
+                <p class="info-text">Kliknij aby dodać produkty do oferty:</p>
+                <div id="products-list" class="products-grid"></div>
+            </div>
+        </div>
+
+        <!-- Prawa strona - Podgląd -->
+        <div class="right-panel">
+            <header class="panel-header">
+                <h2>👁️ Podgląd Oferty</h2>
+                <div class="preview-controls">
+                    <button id="btn-toggle-kanban" class="btn-small" onclick="toggleKanbanMode()">📋 Kanban</button>
+                    <button id="btn-refresh-preview" class="btn-small">🔄 Odśwież</button>
+                    <span id="page-counter" class="page-counter">Strona 1 z 1</span>
+                </div>
+            </header>
+
+            <!-- Nawigacja stron -->
+            <div class="pages-navigation">
+                <button id="btn-prev-page" class="btn-nav" disabled>◀ Poprzednia</button>
+                <div id="pages-tabs"></div>
+                <button id="btn-next-page" class="btn-nav">Następna ▶</button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div id="progress-container" class="progress-container" style="display: none;">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <p id="progress-message" class="progress-message">Przygotowuję...</p>
+            </div>
+
+            <!-- Podgląd -->
+            <div class="preview-container">
+                <div id="preview-page" class="preview-page">
+                    <div class="preview-placeholder">
+                        <p>Wypełnij formularz aby zobaczyć podgląd</p>
+                        <p class="hint">Podgląd aktualizuje się automatycznie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal do zapisywania -->
+    <div id="save-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Zapisz Ofertę</h2>
+            <input type="text" id="offer-name" placeholder="Nazwa oferty" class="input-field">
+            <button id="btn-confirm-save" class="btn btn-success">Zapisz</button>
+        </div>
+    </div>
+
+    <!-- Modal do wczytywania -->
+    <div id="load-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Wczytaj Ofertę</h2>
+            <div id="saved-offers-list"></div>
+        </div>
+    </div>
+
+    <!-- Notyfikacje -->
+    <div id="notification" class="notification"></div>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

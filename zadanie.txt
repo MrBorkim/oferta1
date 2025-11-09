@@ -1,0 +1,127 @@
+Cel projektu:
+Stworzenie modułu do generowania ofert handlowych w formacie DOCX, na podstawie:
+szablonu .docx z placeholderami (np. {{nazwa_firmy}}, {{produkt}})
+danych dynamicznych w pliku .json (np. lista produktów, klient, rabaty)
+reguł wstawiania stron, tabel lub bloków (np. za stroną 2 wstaw wszystkie produkty)
+🧠 Mechanizm działania
+Szablon DOCX
+Przygotowany ręcznie wzorzec (np. w Wordzie) zawiera znaczniki {{placeholder}} w miejscach, które mają być podmienione na dane z JSON.
+Może zawierać nagłówek, podsumowanie, miejsce na dane klienta, miejsce na stronę z produktami itp.
+Plik JSON z danymi
+Zawiera pełny kontekst oferty:
+{
+  "nazwa_firmy": "Firma XYZ Sp. z o.o.",
+  "data": "2025-10-22",
+  "produkty": [
+    {
+      "nazwa": "Produkt A",
+      "cena_netto": 100.00,
+      "ilosc": 5,
+      "vat": 23
+    },
+    {
+      "nazwa": "Produkt B",
+      "cena_netto": 300.00,
+      "ilosc": 2,
+      "vat": 8
+    }
+  ],
+  "wstaw_po_stronie": 2
+}
+Generator ofert (Python)
+Wczytuje szablon .docx (np. python-docx)
+Parsuje plik .json (np. json lub pydantic)
+Działa w kilku krokach:
+Podmienia wszystkie {{placeholder}} na wartości z JSON.
+Znajduje w dokumencie miejsce, po którym mają zostać wstawione dane (np. po stronie nr 2).
+Generuje nowe strony (np. tabela z produktami) i wstawia je w odpowiednim miejscu.
+Finalny plik zapisuje jako Oferta_FirmaXYZ_2025-10-22.docx.
+⚙️ Wymagania techniczne
+Biblioteki Python:
+python-docx – do edycji dokumentów DOCX
+json – do obsługi danych wejściowych
+(opcjonalnie) docxtpl – jeśli chcesz korzystać z Jinja2-like szablonów
+(opcjonalnie) docxcompose – do wstawiania stron z innych plików
+Funkcjonalność wymagająca implementacji:
+Funkcja replace_placeholders(doc, json_data) – podmienia wszystkie placeholdery.
+Funkcja insert_pages_after(doc, page_num, produkty) – generuje stronę z produktami i wstawia ją.
+Obsługa formatowania (np. tabela z produktami z nagłówkiem i odpowiednim stylem).
+Eksport .docx lub konwersja do .pdf.
+
+
+
+1. Szablony ofert (DOCX, PDF, HTML...)
+Każdy szablon to plik z tzw. placeholderami — czyli miejscami do uzupełnienia typu:
+{{nazwa_firmy}}
+{{adres}}
+{{produkty[i].nazwa}}
+{{produkty[i].cena_netto}}
+{{produkty[i].opis}}
+Te szablony mogą być:
+plikami DOCX (np. Word) — edytowalne wizualnie
+HTML-em do eksportu do PDF
+ewentualnie PDF z AcroForm (ale to trudniejsze do edycji)
+📄 2. Plik JSON jako „mapa” szablonu
+Do każdego szablonu dołączony jest plik .json, który opisuje strukturę wymaganych danych:
+Przykład pliku szablon_1.json:
+{
+  "name": "Szablon Oferta Classic A4",
+  "description": "Standardowa oferta z listą produktów i cenami.",
+  "placeholders": {
+    "nazwa_firmy": {
+      "label": "Nazwa firmy",
+      "type": "text",
+      "required": true
+    },
+    "adres": {
+      "label": "Adres firmy",
+      "type": "text"
+    },
+    "data_oferty": {
+      "label": "Data wystawienia",
+      "type": "date"
+    },
+    "produkty": {
+      "label": "Lista produktów",
+      "type": "list",
+      "items": {
+        "nazwa": { "label": "Nazwa", "type": "text" },
+        "cena_netto": { "label": "Cena netto", "type": "number" },
+        "opis": { "label": "Opis", "type": "textarea", "required": false }
+      }
+    },
+    "stopka": {
+      "label": "Informacja w stopce",
+      "type": "textarea"
+    }
+  }
+}
+🧠 3. Co robi Twój system (aplikacja)?
+Parsuje plik .json z metadanymi danego szablonu
+Na jego podstawie dynamicznie tworzy formularz do uzupełnienia (np. w HTML/Flask/Vue/React — bez znaczenia)
+Po uzupełnieniu — dane są wstrzykiwane do szablonu (np. DOCX, HTML → PDF, itp.)
+Generujesz plik oferty finalnej i go eksportujesz
+💡 4. Co daje taki system?
+🔁 Możesz dodać nowy szablon bez pisania kodu – tylko tworzysz plik .json z opisem i plik DOCX/HTML z placeholderami
+✅ Masz pełną walidację danych (np. required, typ number, listy itd.)
+🧩 Każdy szablon może mieć zupełnie inne pola i strukturę
+🧾 Możesz tworzyć szablony personalizowane per klient, per język, per cel (np. oferta techniczna, ogólna, handlowa)
+🏗️ Schemat folderów w projekcie
+/templates/
+  szablon_1.docx
+  szablon_1.json
+  szablon_2.docx
+  szablon_2.json
+🛠 Technologie, które możesz wykorzystać:
+Cel	Technologia
+Parsowanie i wypełnianie DOCX	python-docx, docxtpl
+HTML + PDF	Jinja2 + WeasyPrint / pdfkit
+UI formularzy	Flask + Jinja2 / React / Vue
+Przechowywanie danych	JSON lub baza (np. SQLite/MySQL)
+Obsługa wielu szablonów	System templates/ + metadane .json
+✅ Podsumowując
+Tak, możesz stworzyć system z dynamicznymi szablonami ofert, które będą sterowane przez JSON z pełnym opisem pól, ich typów i struktur.
+
+
+
+
