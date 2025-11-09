@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GENERATOR OFERT - LibreOffice + PyMuPDF
-- Szybka konwersja DOCX → PDF → JPG  
+GENERATOR OFERT - LibreOffice + PyMuPDF + Unoserver
+- Szybka konwersja DOCX → PDF → JPG
 - Pre-rendering JPG szablonów na starcie
 - Cache dla produktów
-- BEZ unoserver (wymaga modułu 'uno')
+- Unoserver (FAST) z fallback do LibreOffice
 """
 
 import os
@@ -34,6 +34,13 @@ except ImportError:
     print("[WARNING] PyMuPDF nie zainstalowane - używam pdf2image")
     from pdf2image import convert_from_path
 
+try:
+    from unoserver.client import UnoClient
+    HAS_UNOSERVER = True
+except ImportError:
+    HAS_UNOSERVER = False
+    print("[WARNING] Unoserver nie zainstalowane - używam bezpośrednio LibreOffice")
+
 # Konfiguracja
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret_key_for_socketio_12345'
@@ -55,9 +62,15 @@ os.makedirs(SAVED_OFFERS_DIR, exist_ok=True)
 os.makedirs(GENERATED_OFFERS_DIR, exist_ok=True)
 os.makedirs(OUT_JPG_DIR, exist_ok=True)
 
-# Cache
+# Cache i Konfiguracja
 libreoffice_lock = threading.Lock()
 conversion_cache = {}
+
+# Unoserver config
+UNOSERVER_HOST = '127.0.0.1'
+UNOSERVER_PORT = 2002
+UNOSERVER_INTERFACE = '127.0.0.1'
+UNOSERVER_UNO_PORT = 2003
 
 # Konwersja
 def find_libreoffice():
@@ -66,6 +79,26 @@ def find_libreoffice():
         if shutil.which(path) or os.path.exists(path):
             return path
     return None
+
+def docx_to_pdf_unoserver(docx_path, out_pdf_path):
+    """Szybka konwersja przez Unoserver"""
+    if not HAS_UNOSERVER:
+        raise RuntimeError("Unoserver nie zainstalowany!")
+
+    try:
+        client = UnoClient(
+            server=UNOSERVER_HOST,
+            port=UNOSERVER_PORT
+        )
+
+        # UnoClient.convert() używa inpath/outpath, nie file objects
+        client.convert(inpath=docx_path, outpath=out_pdf_path, convert_to='pdf')
+
+        if not os.path.exists(out_pdf_path):
+            raise RuntimeError("Unoserver nie wygenerował PDF")
+
+    except Exception as e:
+        raise RuntimeError(f"Unoserver error: {str(e)}")
 
 def docx_to_pdf_libreoffice(docx_path, out_pdf_path):
     soffice = find_libreoffice()
@@ -137,19 +170,32 @@ def convert_docx_to_images(docx_path, use_cache=True, progress_callback=None):
         if file_hash and file_hash in conversion_cache:
             print(f"[CACHE] ⚡ Hit: {os.path.basename(docx_path)}")
             return conversion_cache[file_hash]
-    
+
     print(f"[CONVERT] Start: {os.path.basename(docx_path)}")
-    
+
     if progress_callback:
         progress_callback("Konwersja DOCX → PDF...", 20)
-    
+
     with tempfile.TemporaryDirectory(dir=OUT_JPG_DIR) as tmpdir:
         pdf_path = os.path.join(tmpdir, 'out.pdf')
-        docx_to_pdf_libreoffice(docx_path, pdf_path)
-        
+
+        # Try Unoserver first (FAST), fallback to LibreOffice
+        conversion_success = False
+        if HAS_UNOSERVER:
+            try:
+                print(f"[CONVERT] Używam Unoserver (FAST)...")
+                docx_to_pdf_unoserver(docx_path, pdf_path)
+                conversion_success = True
+            except Exception as e:
+                print(f"[CONVERT] Unoserver failed: {e}, fallback to LibreOffice")
+
+        if not conversion_success:
+            print(f"[CONVERT] Używam LibreOffice headless...")
+            docx_to_pdf_libreoffice(docx_path, pdf_path)
+
         if progress_callback:
             progress_callback("Konwersja PDF → JPG...", 50)
-        
+
         if HAS_PYMUPDF:
             images = pdf_to_jpg_pymupdf(pdf_path, dpi=200, quality=90)
         else:
@@ -611,6 +657,9 @@ print("🚀 GENERATOR OFERT")
 print("="*80)
 print(f"LibreOffice: {find_libreoffice() or 'NIE ZNALEZIONO'}")
 print(f"PyMuPDF: {'✓ TAK' if HAS_PYMUPDF else '✗ NIE (używam pdf2image)'}")
+print(f"Unoserver: {'⚡ TAK (FAST MODE)' if HAS_UNOSERVER else '✗ NIE (używam LibreOffice)'}")
+if HAS_UNOSERVER:
+    print(f"  → {UNOSERVER_HOST}:{UNOSERVER_PORT}")
 print("="*80)
 
 preload_async()

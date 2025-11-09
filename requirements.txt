@@ -7,3 +7,4 @@ Flask-SocketIO==5.3.5
 python-socketio==5.10.0
 Flask-Compress==1.14
 PyMuPDF==1.23.8
+unoserver>=2.0.0

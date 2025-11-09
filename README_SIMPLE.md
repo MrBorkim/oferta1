@@ -15,6 +15,9 @@
 ```bash
 sudo apt-get update
 sudo apt-get install -y libreoffice libreoffice-writer python3 python3-pip
+
+# WAŻNE: libreoffice-writer jest WYMAGANY do konwersji DOCX!
+# Bez niego otrzymasz błąd: "Error: source file could not be loaded"
 ```
 
 ### Zależności Python:
@@ -54,11 +57,20 @@ Po uruchomieniu:
 
 ## 📊 Wydajność
 
-**LibreOffice headless + PyMuPDF:**
-- Konwersja DOCX→PDF: ~5-10s
-- Konwersja PDF→JPG: ~0.5s
+**Unoserver + LibreOffice + PyMuPDF:**
+- Konwersja DOCX→PDF (Unoserver): ~1-3s ⚡ SUPER SZYBKA
+- Konwersja DOCX→PDF (LibreOffice fallback): ~5-10s
+- Konwersja PDF→JPG (PyMuPDF): ~0.5s
 - Pre-rendering produktów przy starcie
 - Cache dla szybszego dostępu
+
+**Unoserver (opcjonalnie):**
+- Unoserver jest uruchamiany automatycznie jeśli zainstalowany
+- Dla jeszcze szybszej konwersji, uruchom unoserver w tle:
+```bash
+# Unoserver został już zainstalowany przez pip (requirements.txt)
+# Jeśli chcesz uruchomić jako usługę systemd, user już ma konfigurację
+```
 
 ## 🛠️ Rozwiązywanie problemów
 
