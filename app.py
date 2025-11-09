@@ -75,6 +75,8 @@ def check_unoserver_running():
     except:
         return False
 
+        # DOCX → PDF
+        docx_to_pdf_libreoffice(docx_path, pdf_path)
 
 def start_unoserver():
     """Uruchom unoserver w daemon mode"""
@@ -107,6 +109,12 @@ def start_unoserver():
         print(f"[UNOSERVER] ❌ Błąd: {e}")
         return False
 
+    # Zapisz w cache
+    if use_cache:
+        file_hash = get_file_hash(docx_path)
+        if file_hash:
+            conversion_cache[file_hash] = images
+            print(f"[CACHE] ✓ Saved: {os.path.basename(docx_path)}")
 
 def find_libreoffice():
     """Znajdź soffice w systemie"""
@@ -235,6 +243,9 @@ def pdf_to_jpg_pdf2image(pdf_path, dpi=200):
 
     return images
 
+    if not os.path.exists(PRODUKTY_DIR):
+        print("[STARTUP] Folder produktów nie istnieje")
+        return
 
 def convert_docx_to_images(docx_path, use_cache=True, progress_callback=None):
     """
@@ -337,6 +348,11 @@ def preload_all_products():
     print(f"[STARTUP] ✅ Cache: {len(conversion_cache)} produktów")
     print("="*80 + "\n")
 
+def preload_templates():
+    """Pre-renderuj JPG szablonów WolfTax na starcie"""
+    print("\n" + "="*80)
+    print("[STARTUP] 🎨 Pre-rendering szablonów WolfTax...")
+    print("="*80)
 
 def preload_templates():
     """Pre-renderuj JPG szablonów WolfTax na starcie"""
@@ -750,8 +766,12 @@ def preview_full_offer():
 
     send_progress("Generuję podgląd...", 5)
 
-    pages_metadata = []
-    page_counter = 0
+        # Spis treści
+        if file_info.get('is_toc') and len(selected_products) > 0:
+            toc_config = template_data.get('toc', {})
+            start_page = toc_config.get('start_page', 5)
+            toc_text = generate_table_of_contents(selected_products, product_custom_fields, start_page)
+            doc = inject_toc_into_doc(doc, toc_text)
 
     # WolfTax multi-file
     template_folder = os.path.join(TEMPLATES_DIR, template_data['folder'])
